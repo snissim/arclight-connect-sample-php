@@ -1,7 +1,7 @@
 <?php
 require 'config/settings.php';
-require 'services/ReferenceServiceNew.php';
 require 'services/AccessControlService.php';
+
 
 
 class AccessControlGateway
