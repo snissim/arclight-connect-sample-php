@@ -21,7 +21,7 @@ class ConsumerGateway
 
             $id = new GetProfile($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->GetProfile($id);
             var_dump($res);
         }
@@ -46,7 +46,7 @@ class ConsumerGateway
 
             $id = new GetResponseStatus($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->GetResponseStatus($id);
             var_dump($res);
         }
@@ -72,7 +72,7 @@ class ConsumerGateway
 
             $id = new GetUpdatedProfiles($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->GetUpdatedProfiles($id);
             var_dump($res);
         }
@@ -99,7 +99,7 @@ class ConsumerGateway
 
             $id = new RegisterWebProfile($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->RegisterWebProfile($id);
             var_dump($res);
         }
@@ -131,7 +131,7 @@ class ConsumerGateway
 
             $id = new SearchProfiles($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->SearchProfiles($id);
             var_dump($res);
         }
@@ -157,7 +157,7 @@ class ConsumerGateway
 
             $id = new SubmitResponse($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->SubmitResponse($id);
             var_dump($res);
         }
@@ -182,7 +182,7 @@ class ConsumerGateway
 
             $id = new SubmitResponseAndCalculateBeFirstReady($Req);
 
-            $service = new ConsumerService(ACCESS_CONTROL_WSDL);
+            $service = new ConsumerService(CONSUMER_WSDL);
             $res = $service->SubmitResponseAndCalculateBeFirstReady($id);
             var_dump($res);
         }
