@@ -1,6 +1,9 @@
 <?php
 require 'vendor/autoload.php';
-require 'data/ServicesGateway.php';
+require 'data/AccessControlGateway.php';
+require 'data/ConsumerGateway.php';
+require 'data/ReferenceGateway.php';
+
 
 $app = new \Slim\Slim();
 
@@ -16,7 +19,10 @@ $app->get('/', function () use  ($twig)  {
 
 
 $app->get('/access', function () use  ($twig)  {
-    //ServicesGateway::submitAccessControl();
+    $p = Array("MarketCode" => "a3223",
+               "ConsumerId" => "342234",
+               "Password" => "adfasf");
+    AccessControlGateway::setCredentials($p);
     echo $twig->render('access.twig');
 });
 

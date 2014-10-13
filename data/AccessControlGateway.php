@@ -14,13 +14,14 @@ class AccessControlGateway
             $Req = new SetCredentialsRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->ConsumerId = $params->ConsumerId;
-            $Req->Password = $params->Password;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->ConsumerId = $params["ConsumerId"];
+            $Req->Password = $params["Password"];
+
 
             $id = new SetCredentials($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->SetCredentials($id);
             var_dump($res);
         }
@@ -48,7 +49,7 @@ class AccessControlGateway
 
             $id = new ChangePassword ($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->ChangePassword($id);
             var_dump($res);
         }
@@ -75,7 +76,7 @@ class AccessControlGateway
 
             $id = new ChangePasswordByResetCode($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->ChangePasswordByResetCode($id);
             var_dump($res);
         }
@@ -101,7 +102,7 @@ class AccessControlGateway
 
             $id = new ResetCredentials($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->ResetCredentials($id);
             var_dump($res);
         }
@@ -127,7 +128,7 @@ class AccessControlGateway
 
             $id = new SendPasswordResetLink($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->SendPasswordResetLink($id);
             var_dump($res);
         }
@@ -152,7 +153,7 @@ class AccessControlGateway
 
             $id = new SendUserName($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->SendUserName($id);
             var_dump($res);
         }
@@ -177,7 +178,7 @@ class AccessControlGateway
 
             $id = new ValidateUser($Req);
 
-            $service = new AccessControlService(ACCESS_CONTROL_WSDL);
+            $service = new AccessControlService(["wsdl", ACCESS_CONTROL_WSDL]);
             $res = $service->ValidateUser($id);
             var_dump($res);
         }

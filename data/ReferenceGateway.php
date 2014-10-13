@@ -19,7 +19,7 @@ class ReferenceGateway
 
             $id = new GetBrandAmbassadors($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetBrandAmbassadors($id);
             var_dump($res);
         }
@@ -43,7 +43,7 @@ class ReferenceGateway
 
             $id = new GetAddressReferenceData($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetAddressReferenceData($id);
             var_dump($res);
         }
@@ -67,7 +67,7 @@ class ReferenceGateway
 
             $id = new GetBrands($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetBrands($id);
             var_dump($res);
         }
@@ -90,7 +90,7 @@ class ReferenceGateway
 
             $id = new GetCampaigns($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetCampaigns($id);
             var_dump($res);
         }
@@ -114,7 +114,7 @@ class ReferenceGateway
 
             $id = new GetCities($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetCities($id);
             var_dump($res);
         }
@@ -139,7 +139,7 @@ class ReferenceGateway
 
             $id = new getGIIDTypes($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetGIIDTypes($id);
             var_dump($res);
         }
@@ -162,7 +162,7 @@ class ReferenceGateway
 
             $id = new GetMobileProviders($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetMobileProviders($id);
             var_dump($res);
         }
@@ -185,7 +185,7 @@ class ReferenceGateway
 
             $id = new GetStates($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetStates($id);
             var_dump($res);
         }
@@ -208,7 +208,7 @@ class ReferenceGateway
 
             $id = new GetStreetTypes($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetStreetTypes($id);
             var_dump($res);
         }
@@ -232,7 +232,7 @@ class ReferenceGateway
 
             $id = new GetVenues($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetVenues($id);
             var_dump($res);
         }
@@ -258,7 +258,7 @@ class ReferenceGateway
 
             $id = new GetReferenceData($Req);
 
-            $service = new ReferenceServiceNew(REFERENCE_WSDL);
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
             $res = $service->GetReferenceData($id);
             var_dump($res);
         }
