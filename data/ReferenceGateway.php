@@ -14,8 +14,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetBrandAmbassadors($Req);
 
@@ -37,9 +37,9 @@ class ReferenceGateway
             $Req = new GetAddressReferenceDataRequest(false);
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->DisplayOnExternalSystem  = $params->DisplayOnExternalSystem;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->DisplayOnExternalSystem  = $params["DisplayOnExternalSystem"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetAddressReferenceData($Req);
 
@@ -62,8 +62,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetBrands($Req);
 
@@ -85,8 +85,8 @@ class ReferenceGateway
             $Req = new GetCampaignsRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetCampaigns($Req);
 
@@ -109,8 +109,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetCities($Req);
 
@@ -134,8 +134,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new getGIIDTypes($Req);
 
@@ -157,8 +157,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetMobileProviders($Req);
 
@@ -180,8 +180,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetStates($Req);
 
@@ -203,8 +203,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetStreetTypes($Req);
 
@@ -227,8 +227,8 @@ class ReferenceGateway
             $Req = new RefereceDataServiceRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
 
             $id = new GetVenues($Req);
 
@@ -250,10 +250,10 @@ class ReferenceGateway
             $Req = new GetReferenceDataRequest(false);
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params->MarketCode;
-            $Req->LastEditDate = $params->LastEditDate;
-            $Req->DisplayOnExternalSystem = $params->DisplayOnExternalSystem;
-            $Req->CampaignType = $params->CampaignType;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->LastEditDate = $params["LastEditDate"];
+            $Req->DisplayOnExternalSystem = $params["DisplayOnExternalSystem"];
+            $Req->CampaignType = $params["CampaignType"];
 
 
             $id = new GetReferenceData($Req);
