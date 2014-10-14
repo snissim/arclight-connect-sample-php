@@ -46,7 +46,7 @@ Technologies:
     $ ./vendor/bin/wsdl2php -i https://connect-pmilastage-arclight.arcww2.com/1.3/pmi/ConsumerService.svc?singleWsdl -o data/services
 
     ```
-
+4. Update settings in /config/settings.php file
 
 
 Contact [ADD CONTACT INFO] if you have any issues with the initial setup.
