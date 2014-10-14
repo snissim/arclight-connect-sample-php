@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %} - Brand X</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
         <style type="text/css">
             p{
 
@@ -25,6 +25,11 @@
             .formentry
             {
                 padding: 70px;
+            }
+
+            .col-centered{
+                float: none;
+                margin: 0 auto;
             }
 
         </style>
@@ -53,7 +58,7 @@
 </nav>
 <div id="content">{% block content %}{% endblock %}</div>
 <script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <div id="footer">
     {% block footer %}
         <hr>

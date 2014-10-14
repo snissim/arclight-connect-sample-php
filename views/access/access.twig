@@ -1,0 +1,54 @@
+{% extends "./layout.twig" %}
+{% block title %}Access Control{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/access">Access Control</a></li>
+    </ol>
+    <div class="container">
+        <h1>Access Control Serivces</h1>
+        <div class="well">
+            <div class="row center-block">
+
+                <div class="col-lg-3">
+                    <a href="/access/setcredentials">Set Credentials</a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/access/changePassword">Change Password</a>
+                </div>
+                <div class="col-lg-3">
+
+                    <a href="/access/changePasswordByResetCode">Change Password By Reset Code</a>
+                </div>
+            </div>
+
+            <div class="row center-block">
+
+                <div class="col-lg-3">
+                    <a href="/access/resetCredentials">Reset Credentials</a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/access/sendPasswordResetLink">Send Password Reset Link</a>
+                </div>
+                <div class="col-lg-3">
+
+                    <a href="/access/sendUserName">Send Username</a>
+                </div>
+            </div>
+
+            <div class="row center-block">
+
+                <div class="col-lg-3">
+                    <a href="/access/validateUser">Validate User</a>
+                </div>
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

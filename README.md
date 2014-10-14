@@ -14,7 +14,7 @@ Technologies:
 --Composer (Dependency management) -- https://getcomposer.org/
 
 
-1. Clone into the directory
+1. Clone into web directory
 
 
 
@@ -23,7 +23,7 @@ Technologies:
 
     ```
 
-2. Install app dependencies  (Note: only needed if you're adding packages)
+2. Install app dependencies
 
 
 
