@@ -6,7 +6,6 @@ require 'data/ReferenceGateway.php';
 
 $app = new \Slim\Slim();
 
-
 //TWIG view engine settings begin
 $loader = new Twig_Loader_Filesystem('views');
 $twig = new Twig_Environment($loader);
@@ -14,6 +13,8 @@ $twig = new Twig_Environment($loader);
 
 //Load controllers begin
 require 'controllers/accessController.php';
+require 'controllers/consumerController.php';
+require 'controllers/referenceController.php';
 //Load controllers end
 
 

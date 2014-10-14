@@ -3,6 +3,7 @@
 require 'config/settings.php';
 require 'services/ConsumerProfile.php';
 require 'services/PmiConsumerProfile.php';
+require 'services/ConsumerService.php';
 
 
 class ConsumerGateway
@@ -63,7 +64,7 @@ class ConsumerGateway
     {
         try
         {
-            $Req = new GetUpdatedProfilesRequest($params->StartDate);
+            $Req = new GetUpdatedProfilesRequest($params["EndDate"]);
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
             $Req->MarketCode = $params["MarketCode"];
@@ -125,6 +126,7 @@ class ConsumerGateway
             $Req->Email  = $params["Email"];
             $Req->FirstName  = $params["FirstName"];
             $Req->LastName = $params["LastName"];
+            $Req->MiddleName = $params["MiddleName"];
             $Req->GIIDNumber  = $params["GIIDNumber"];
             $Req->MaternalLastName = $params["MaternalLastName"];
 

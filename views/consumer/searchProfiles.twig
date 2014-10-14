@@ -1,0 +1,59 @@
+{% extends "./layout.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/consumer">Consumer Services</a></li>
+    </ol>
+    <div class="container">
+        <h1>{{ Header }}</h1>
+        <div class="well">
+            <form class="formentry" role="form" action="/consumer/searchProfiles" method="post">
+                <div class="form-group">
+                    <label for="MarketCode">Market Code</label>
+                    <input type="text" class="form-control" name="MarketCode" value="{{ MarketCode }}">
+                </div>
+                <div class="form-group">
+                    <label for="DateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control" name="DateOfBirth" value="{{ DateOfBirth }}" >
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" name="Email" value="{{ Email }}" >
+                </div>
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input type="text" class="form-control" name="FirstName" value="{{ FirstName }}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="MiddleName">Middle Name</label>
+                    <input type="text" class="form-control" name="MiddleName" value="{{ MiddleName }}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" class="form-control" name="LastName" value="{{ LastName }}" >
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="MaternalLastName">Maternal Last Name</label>
+                    <input type="text" class="form-control" name="MaternalLastName" value="{{ MaternalLastName }}" >
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="GIIDNumber">GIID Number</label>
+                    <input type="text" class="form-control" name="GIIDNumber" value="{{ GIIDNumber }}" >
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
