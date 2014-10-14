@@ -98,7 +98,7 @@ class AccessControlGateway
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
             $Req->MarketCode = $params["MarketCode"];
-            $Req->Email = $params["NewPassword"];
+            $Req->Email = $params["Email"];
             $Req->UserName = $params["UserName"];
 
             $id = new ResetCredentials($Req);
