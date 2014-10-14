@@ -1,5 +1,10 @@
 <?php
 
+$app->get('/consumer', function () use  ($twig)  {
+    //ServicesGateway::submitConsumer();
+    echo $twig->render('consumer/consumer.twig');
+});
+
 
 
 $app->get('/consumer/getProfile', function () use  ($twig, $app)  {

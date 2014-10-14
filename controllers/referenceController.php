@@ -1,5 +1,11 @@
 <?php
 
+$app->get('/reference', function () use  ($twig, $app)  {
+    //ServicesGateway::submitRerence($app);
+    echo $twig->render('reference/reference.twig');
+});
+
+
 
 $app->get('/reference/getBrandAmbassadors', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {

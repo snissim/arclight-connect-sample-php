@@ -1,6 +1,15 @@
 <?php
 
 
+$app->get('/access', function () use  ($twig)  {
+    /*$params = Array("MarketCode" => "a3223",
+               "ConsumerId" => "342234",
+               "Password" => "adfasf");
+    AccessControlGateway::setCredentials($params);
+    */
+    echo $twig->render('access/access.twig');
+});
+
 $app->get('/access/setcredentials', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
         $app->setCookie('MarketCode', $app->request->post('MarketCode'));

@@ -23,27 +23,4 @@ $app->get('/', function () use  ($twig)  {
 });
 
 
-$app->get('/access', function () use  ($twig)  {
-    /*$params = Array("MarketCode" => "a3223",
-               "ConsumerId" => "342234",
-               "Password" => "adfasf");
-    AccessControlGateway::setCredentials($params);
-    */
-    echo $twig->render('access/access.twig');
-});
-
-
-
-$app->get('/consumer', function () use  ($twig)  {
-    //ServicesGateway::submitConsumer();
-    echo $twig->render('consumer/consumer.twig');
-});
-
-
-$app->get('/reference', function () use  ($twig, $app)  {
-    //ServicesGateway::submitRerence($app);
-    echo $twig->render('reference/reference.twig');
-});
-
-
 $app->run();
