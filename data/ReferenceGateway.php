@@ -30,29 +30,6 @@ class ReferenceGateway
     }
 
 
-    public static function getAddressReferenceData($params)
-    {
-        try
-        {
-            $Req = new GetAddressReferenceDataRequest(false);
-            $Req->Auth = new Authentication();
-            $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
-            $Req->DisplayOnExternalSystem  = $params["DisplayOnExternalSystem"];
-            $Req->LastEditDate = $params["LastEditDate"];
-
-            $id = new GetAddressReferenceData($Req);
-
-            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
-            $res = $service->GetAddressReferenceData($id);
-            var_dump($res);
-        }
-        catch (Exception $e)
-        {
-            var_dump($e->getMessage());
-        }
-    }
-
 
 
     public static function getBrands($params)
@@ -241,6 +218,31 @@ class ReferenceGateway
             var_dump($e->getMessage());
         }
     }
+
+
+    public static function getAddressReferenceData($params)
+    {
+        try
+        {
+            $Req = new GetAddressReferenceDataRequest(false);
+            $Req->Auth = new Authentication();
+            $Req->Auth->DeviceKey = DEVICE_KEY;
+            $Req->MarketCode = $params["MarketCode"];
+            $Req->DisplayOnExternalSystem  = $params["DisplayOnExternalSystem"];
+            $Req->LastEditDate = $params["LastEditDate"];
+
+            $id = new GetAddressReferenceData($Req);
+
+            $service = new ReferenceServiceNew(["wsdl", REFERENCE_WSDL]);
+            $res = $service->GetAddressReferenceData($id);
+            var_dump($res);
+        }
+        catch (Exception $e)
+        {
+            var_dump($e->getMessage());
+        }
+    }
+
 
 
     public static function getReferenceData($params)

@@ -1,0 +1,28 @@
+{% extends "./layout.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/reference">Reference Services</a></li>
+    </ol>
+    <div class="container">
+        <h1>{{ Header }}</h1>
+        <div class="well">
+            <form class="formentry" role="form" action="/reference/getBrands" method="post">
+                <div class="form-group">
+                    <label for="MarketCode">Market Code</label>
+                    <input type="text" class="form-control" name="MarketCode" value="{{ MarketCode }}">
+                </div>
+                <div class="form-group">
+                    <label for="LastEditDate">Last Edit Date</label>
+                    <input type="date" class="form-control" name="LastEditDate" value="{{ LastEditDate }}" >
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
