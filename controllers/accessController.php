@@ -2,11 +2,6 @@
 
 
 $app->get('/access', function () use  ($twig)  {
-    /*$params = Array("MarketCode" => "a3223",
-               "ConsumerId" => "342234",
-               "Password" => "adfasf");
-    AccessControlGateway::setCredentials($params);
-    */
     echo $twig->render('access/access.twig');
 });
 

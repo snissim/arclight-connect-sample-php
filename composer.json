@@ -2,7 +2,7 @@
     "require": {
         "slim/slim": "2.*",
         "twig/twig": "1.*",
-        "wsdl2phpgenerator/wsdl2phpgenerator": "2.5.1"
+        "ext-soap": "*"
     }
 
 }
