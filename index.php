@@ -15,6 +15,7 @@ $twig = new Twig_Environment($loader);
 require 'controllers/accessController.php';
 require 'controllers/consumerController.php';
 require 'controllers/referenceController.php';
+require 'controllers/examplesController.php';
 //Load controllers end
 
 
