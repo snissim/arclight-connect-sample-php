@@ -11,21 +11,6 @@
         <h1>{{ Header }}</h1>
         <div class="well">
             <form class="formentry" role="form" action="/registration" method="post">
-
-                <div class="form-group">
-                    <label for="MarketCode">Market Code</label>
-                    <input type="text" class="form-control" name="MarketCode" value="{{ MarketCode }}">
-                </div>
-
-                <div class="form-group">
-                    <label for="LayoutName">Layout</label>
-                    <select name="LayoutName" class="form-control">
-                        <option value="InboundAddressFile">Address</option>
-                        <option value="InboundSMSFile">SMS</option>
-                        <option value="InboundEmailFile">Email</option>
-                    </select>
-                </div>
-
                 <div class="form-group">
                     <label for="FirstName">First Name</label>
                     <input type="text" class="form-control" name="FirstName" value="{{ FirstName }}" >

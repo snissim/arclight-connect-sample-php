@@ -14,7 +14,7 @@ class AccessControlGateway
             $Req = new SetCredentialsRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->ConsumerId = $params["ConsumerId"];
             $Req->Password = $params["Password"];
 
@@ -42,7 +42,7 @@ class AccessControlGateway
             $Req = new ChangePasswordRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->NewPassword = $params["NewPassword"];
             $Req->OldPassword = $params["OldPassword"];
             $Req->UserName = $params["UserName"];
@@ -70,7 +70,7 @@ class AccessControlGateway
             $Req = new ChangePasswordByResetCodeRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->NewPassword = $params["NewPassword"];
             $Req->UserName = $params["UserName"];
             $Req->ResetCode = $params["ResetCode"];
@@ -97,7 +97,7 @@ class AccessControlGateway
             $Req = new ResetCredentialsRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->Email = $params["Email"];
             $Req->UserName = $params["UserName"];
 
@@ -123,7 +123,7 @@ class AccessControlGateway
             $Req = new SendPasswordResetLinkRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->Url = $params["Url"];
             $Req->UserName = $params["UserName"];
 
@@ -149,7 +149,7 @@ class AccessControlGateway
             $Req = new SendUserNameRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->Email = $params["Email"];
 
             $id = new SendUserName($Req);
@@ -173,7 +173,7 @@ class AccessControlGateway
             $Req = new ValidateUserRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->Password = $params["Password"];
             $Req->UserName = $params["UserName"];
 
