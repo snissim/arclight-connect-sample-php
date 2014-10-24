@@ -16,7 +16,7 @@ class ConsumerGateway
             $Req = new GetProfileRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->ConsumerID  = $params["ConsumerId"];
             $Req->ResponseGroups = $params["ResponseGroups"];
 
@@ -42,7 +42,7 @@ class ConsumerGateway
             $Req = new GetResponseStatusRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->TransactionID  = $params["TransactionID"];
 
             $id = new GetResponseStatus($Req);
@@ -67,7 +67,7 @@ class ConsumerGateway
             $Req = new GetUpdatedProfilesRequest($params["EndDate"]);
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->ResponseGroups  = $params["ResponseGroups"];
             $Req->EndDate = $params["EndDate"];
 
@@ -94,7 +94,7 @@ class ConsumerGateway
             $Req = new RegisterWebProfileRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->LayoutName  = $params["LayoutName"];
             $Req->ResponseAttributes = $params["ResponseAttributes"];
 
@@ -121,7 +121,7 @@ class ConsumerGateway
             $Req = new SearchProfilesRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->DateOfBirth  = $params["DateOfBirth"];
             $Req->Email  = $params["Email"];
             $Req->FirstName  = $params["FirstName"];
@@ -153,7 +153,7 @@ class ConsumerGateway
             $Req = new SubmitResponseRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->LayoutName  = $params["LayoutName"];
             $Req->ResponseAttributes = $params["ResponseAttributes"];
 
@@ -178,7 +178,7 @@ class ConsumerGateway
             $Req = new CalculateBeFirstReadyRequest();
             $Req->Auth = new Authentication();
             $Req->Auth->DeviceKey = DEVICE_KEY;
-            $Req->MarketCode = $params["MarketCode"];
+            $Req->MarketCode = MARKET_CODE;
             $Req->LayoutName  = $params["LayoutName"];
             $Req->ResponseAttributes = $params["ResponseAttributes"];
 

@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <style type="text/css">
             p{
 
@@ -58,7 +59,7 @@
     </div>
 </nav>
 <div id="content">{% block content %}{% endblock %}</div>
-<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <div id="footer">
     {% block footer %}
@@ -72,5 +73,28 @@
         </div>
     {% endblock %}
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Use Glyphicons icons
+        $(submitFrm).bootstrapValidator({
+            feedbackIcons: {
+                required: 'glyphicon glyphicon-asterisk',
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            }
+        });
+
+        // Use FontAwesome icons
+        $(submitFrm).bootstrapValidator({
+            feedbackIcons: {
+                required: 'fa fa-asterisk',
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh'
+            }
+        });
+    });
+</script>
 </body>
 </html>

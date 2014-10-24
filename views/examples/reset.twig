@@ -4,19 +4,18 @@
     {{ parent() }}
 {% endblock %}
 {% block content %}
-    <ol class="breadcrumb">
-        <li><a href="/">Home</a></li>
-        <li><a href="/access">Access Control Services</a></li>
-    </ol>
     <div class="container">
         <h1>{{ Header }}</h1>
         <div class="well">
-            <form class="formentry" role="form" action="/access/resetCredentials" method="post">
+            <form class="formentry" role="form" action="/reset" method="post">
                 <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input type="text" class="form-control" name="Email" value="{{ Email }}" >
+                    <label for="ResetCode">Reset Code</label>
+                    <input type="text" class="form-control" name="ResetCode" value="{{ ResetCode }}" >
                 </div>
-
+                <div class="form-group">
+                    <label for="NewPassword">New Password</label>
+                    <input type="text" class="form-control" name="NewPassword" value="{{ NewPassword }}" >
+                </div>
                 <div class="form-group">
                     <label for="UserName">Username</label>
                     <input type="text" class="form-control" name="UserName" value="{{ UserName }}" >

@@ -1,7 +1,6 @@
 <?php
 
 $app->get('/consumer', function () use  ($twig)  {
-    //ServicesGateway::submitConsumer();
     echo $twig->render('consumer/consumer.twig');
 });
 
@@ -9,8 +8,7 @@ $app->get('/consumer', function () use  ($twig)  {
 
 $app->get('/consumer/getProfile', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "ConsumerId" => $app->request->post('ConsumerId'),
             "ResponseGroups" => $app->request->post('ResponseGroups'));
         ConsumerGateway::getProfile($params);
@@ -18,7 +16,6 @@ $app->get('/consumer/getProfile', function () use  ($twig, $app)  {
 
     echo $twig->render('consumer/getProfile.twig', array('title' => 'Get Profile',
         'Header' => "Get Profile",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'ConsumerId' => $app->request->post('ConsumerId'),
         'ResponseGroups' => $app->request->post('ResponseGroups'),
     ));
@@ -29,15 +26,13 @@ $app->get('/consumer/getProfile', function () use  ($twig, $app)  {
 
 $app->get('/consumer/getResponseStatus', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "TransactionID" => $app->request->post('TransactionID'));
         ConsumerGateway::getResponseStatus($params);
     }
 
     echo $twig->render('consumer/getResponseStatus.twig', array('title' => 'Get Response Status',
         'Header' => "Get Response Status",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'TransactionID' => $app->request->post('TransactionID')
     ));
 
@@ -48,8 +43,7 @@ $app->get('/consumer/getResponseStatus', function () use  ($twig, $app)  {
 
 $app->get('/consumer/getUpdatedProfiles', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "EndDate" => $app->request->post('EndDate'),
             "ResponseGroups" => $app->request->post('ResponseGroups'));
         ConsumerGateway::getUpdatedProfiles($params);
@@ -57,7 +51,6 @@ $app->get('/consumer/getUpdatedProfiles', function () use  ($twig, $app)  {
 
     echo $twig->render('consumer/getUpdatedProfiles.twig', array('title' => 'Get Updated Profile',
         'Header' => "Get Updated Profile",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'EndDate' => $app->request->post('EndDate'),
         'ResponseGroups' => $app->request->post('ResponseGroups')
     ));
@@ -68,8 +61,7 @@ $app->get('/consumer/getUpdatedProfiles', function () use  ($twig, $app)  {
 
 $app->get('/consumer/registerWebProfile', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "LayoutName" => $app->request->post('LayoutName'),
             "ResponseAttributes" =>   processResponseAttributes($app->request->post('ResponseAttributes')));
         ConsumerGateway::registerWebProfile($params);
@@ -77,7 +69,6 @@ $app->get('/consumer/registerWebProfile', function () use  ($twig, $app)  {
 
     echo $twig->render('consumer/registerWebProfile.twig', array('title' => 'Register Web Profile',
         'Header' => "Register Web Profile",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'LayoutName' => $app->request->post('LayoutName'),
         'ResponseAttributes' => $app->request->post('ResponseAttributes')
     ));
@@ -88,8 +79,7 @@ $app->get('/consumer/registerWebProfile', function () use  ($twig, $app)  {
 
 $app->get('/consumer/searchProfiles', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "DateOfBirth" => $app->request->post('DateOfBirth'),
             "Email" => $app->request->post('Email'),
             "FirstName" => $app->request->post('FirstName'),
@@ -102,7 +92,6 @@ $app->get('/consumer/searchProfiles', function () use  ($twig, $app)  {
 
     echo $twig->render('consumer/searchProfiles.twig', array('title' => 'Search Profiles',
         'Header' => "Search Profiles",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'DateOfBirth' => $app->request->post('DateOfBirth'),
         'Email' => $app->request->post('Email'),
         'FirstName' => $app->request->post('FirstName'),
@@ -118,8 +107,7 @@ $app->get('/consumer/searchProfiles', function () use  ($twig, $app)  {
 
 $app->get('/consumer/submitResponse', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "LayoutName" => $app->request->post('LayoutName'),
             "ResponseAttributes" =>  processResponseAttributes($app->request->post('ResponseAttributes')));
         ConsumerGateway::submitResponse($params);
@@ -127,7 +115,6 @@ $app->get('/consumer/submitResponse', function () use  ($twig, $app)  {
 
     echo $twig->render('consumer/submitResponse.twig', array('title' => 'Submit Response',
         'Header' => "Submit Response",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'LayoutName' => $app->request->post('LayoutName'),
         'ResponseAttributes' => $app->request->post('ResponseAttributes'),
     ));
@@ -137,8 +124,7 @@ $app->get('/consumer/submitResponse', function () use  ($twig, $app)  {
 
 $app->get('/consumer/submitResponseAndCalculateBeFirstReady', function () use  ($twig, $app)  {
     if ($app->request()->isPost()) {
-        $app->setCookie('MarketCode', $app->request->post('MarketCode'));
-        $params = Array("MarketCode" => $app->request->post('MarketCode'),
+        $params = Array(
             "LayoutName" => $app->request->post('LayoutName'),
             "ResponseAttributes" =>  processResponseAttributes($app->request->post('ResponseAttributes')));
         ConsumerGateway::submitResponseAndCalculateBeFirstReady($params);
@@ -146,7 +132,6 @@ $app->get('/consumer/submitResponseAndCalculateBeFirstReady', function () use  (
 
     echo $twig->render('consumer/submitResponseAndCalculateBeFirstReady.twig', array('title' => 'Submit Response And Calculate Be First Ready',
         'Header' => "Submit Response And Calculate Be First Ready",
-        'MarketCode' => $app->getCookie('MarketCode'),
         'LayoutName' => $app->request->post('LayoutName'),
         'ResponseAttributes' => $app->request->post('ResponseAttributes'),
     ));
