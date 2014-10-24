@@ -77,9 +77,9 @@ $app->map('/resetpassword', function () use  ($twig, $app)  {
 $app->map('/reset', function () use  ($twig, $app)  {
 
     if ($app->request()->isPost()) {
-        $params = Array('NewPassword' => $app->request->post("resetcode"),
+        $params = Array('NewPassword' => $app->request->post("NewPassword"),
             'UserName' => $app->request->post("UserName"),
-            'ResetCode' => $app->request->post("resetcode"));
+            'ResetCode' => $app->request->post("ResetCode"));
         AccessControlGateway::changePasswordByResetCode($params);
     }
     echo $twig->render('examples/reset.twig', array('title' => 'Reset Password',
