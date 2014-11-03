@@ -10,9 +10,21 @@ $app->map('/registration', function () use  ($twig, $app)  {
         "SourceProvince" => $app->request->post('SourceProvince'),
         "DirectMailPostalCode" => $app->request->post('DirectMailPostalCode'),
         "GenderCode" => $app->request->post('GenderCode'),
+        'GIIDType1Code' => $app->request->post('GIIDType1Code'),
+        'EmailAddress' => $app->request->post('EmailAddress'),
         "DateOfBirth" => $app->request->post('DateOfBirth'),
+        "ResponseDate" => $app->request->post('ResponseDate'),
+        "CampaignCode" => $app->request->post('CampaignCode'),
+        "PhaseCode" => $app->request->post('PhaseCode'),
+        "AudienceCode" => $app->request->post('AudienceCode'),
+        "MediaCategoryCode" => $app->request->post('MediaCategoryCode'),
+        "PieceCategoryCode" => $app->request->post('PieceCategoryCode'),
+        "PieceCode" => $app->request->post('PieceCode'),
+        "KeyDate" => $app->request->post('KeyDate'),
+        "DirectMailDeliveryStatusCode" => DIRECT_MAIL_DELIVERY_STATUS_CODE,
+        "EmailDeliverabilityStatusCode" => EMAIL_DELIVERABILITY_STATUS_CODE,
+        "HasAcceptedLegalTermsCode" => $app->request->post('HasAcceptedLegalTermsCode') != "Y"? "N":"Y",
         "ProfileCode" => $app->request->post('ProfileCode'));
-
     if ($app->request()->isPost()) {
         $params = Array(
             "LayoutName" => "WebProfileRegistration",
@@ -30,7 +42,18 @@ $app->map('/registration', function () use  ($twig, $app)  {
         'SourceProvince' => $app->request->post('SourceProvince'),
         'DirectMailPostalCode' => $app->request->post('DirectMailPostalCode'),
         'GenderCode' => $app->request->post('GenderCode'),
+        'GIIDType1Code' => $app->request->post('GIIDType1Code'),
+        'EmailAddress' => $app->request->post('EmailAddress'),
         'DateOfBirth' => $app->request->post('DateOfBirth'),
+        "ResponseDate" => $app->request->post('ResponseDate'),
+        "CampaignCode" => $app->request()->isGet()? "AR1400CP10AL1": $app->request->post('CampaignCode'),
+        "PhaseCode" => $app->request()->isGet()? "AAAA": $app->request->post('PhaseCode'),
+        "MediaCategoryCode" => $app->request()->isGet()? "OEM": $app->request->post('MediaCategoryCode'),
+        "PieceCategoryCode" => $app->request()->isGet()? "900": $app->request->post('PieceCategoryCode'),
+        "PieceCode" => $app->request()->isGet()? "900901": $app->request->post('PieceCode'),
+        "AudienceCode" => $app->request()->isGet()? "0001": $app->request->post('AudienceCode'),
+        "KeyDate" => $app->request->post('KeyDate'),
+        "HasAcceptedLegalTermsCode" => $app->request->post('HasAcceptedLegalTermsCode'),
         'ProfileCode' => $app->request->post('ProfileCode'),
     ));
 

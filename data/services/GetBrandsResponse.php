@@ -6,18 +6,20 @@ class GetBrandsResponse extends ResponseBase
 {
 
     /**
-     * @var Brand[] $Brands
+     * @var anyType $GetBrandsResult
      * @access public
      */
-    public $Brands = null;
+    public $GetBrandsResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetBrandsResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetBrandsResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetBrandsResult = $GetBrandsResult;
     }
 
 }

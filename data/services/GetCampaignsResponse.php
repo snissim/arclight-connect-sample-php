@@ -6,18 +6,20 @@ class GetCampaignsResponse extends ResponseBase
 {
 
     /**
-     * @var Campaign[] $Campaigns
+     * @var anyType $GetCampaignsResult
      * @access public
      */
-    public $Campaigns = null;
+    public $GetCampaignsResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetCampaignsResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetCampaignsResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetCampaignsResult = $GetCampaignsResult;
     }
 
 }

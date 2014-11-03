@@ -6,18 +6,20 @@ class GetStatesResponse extends ResponseBase
 {
 
     /**
-     * @var State[] $States
+     * @var anyType $GetStatesResult
      * @access public
      */
-    public $States = null;
+    public $GetStatesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetStatesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetStatesResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetStatesResult = $GetStatesResult;
     }
 
 }

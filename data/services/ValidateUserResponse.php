@@ -12,12 +12,20 @@ class ValidateUserResponse extends ResponseBase
     public $ConsumerID = null;
 
     /**
-     * @param int $ErrorCode
+     * @var boolean $IsAuthenticated
      * @access public
      */
-    public function __construct($ErrorCode)
+    public $IsAuthenticated = null;
+
+    /**
+     * @param int $ErrorCode
+     * @param boolean $IsAuthenticated
+     * @access public
+     */
+    public function __construct($ErrorCode, $IsAuthenticated)
     {
       parent::__construct($ErrorCode);
+      $this->IsAuthenticated = $IsAuthenticated;
     }
 
 }

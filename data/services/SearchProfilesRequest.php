@@ -48,6 +48,12 @@ class SearchProfilesRequest extends ServiceRequest
     public $MiddleName = null;
 
     /**
+     * @var string $State
+     * @access public
+     */
+    public $State = null;
+
+    /**
      * @access public
      */
     public function __construct()

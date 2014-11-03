@@ -6,18 +6,20 @@ class GetUpdatedProfilesResponse extends ResponseBase
 {
 
     /**
-     * @var ConsumerProfile[] $Profiles
+     * @var anyType $GetUpdatedProfilesResult
      * @access public
      */
-    public $Profiles = null;
+    public $GetUpdatedProfilesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetUpdatedProfilesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetUpdatedProfilesResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetUpdatedProfilesResult = $GetUpdatedProfilesResult;
     }
 
 }

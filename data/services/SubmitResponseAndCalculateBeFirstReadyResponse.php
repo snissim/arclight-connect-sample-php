@@ -6,19 +6,20 @@ class SubmitResponseAndCalculateBeFirstReadyResponse extends SubmitResponseRespo
 {
 
     /**
-     * @var boolean $IsBeFirstReady
+     * @var anyType $SubmitResponseAndCalculateBeFirstReadyResult
      * @access public
      */
-    public $IsBeFirstReady = null;
+    public $SubmitResponseAndCalculateBeFirstReadyResult = null;
 
     /**
-     * @param boolean $IsBeFirstReady
+     * @param anyType $SubmitResponseResult
+     * @param anyType $SubmitResponseAndCalculateBeFirstReadyResult
      * @access public
      */
-    public function __construct($IsBeFirstReady)
+    public function __construct($SubmitResponseResult, $SubmitResponseAndCalculateBeFirstReadyResult)
     {
-      parent::__construct();
-      $this->IsBeFirstReady = $IsBeFirstReady;
+      parent::__construct($SubmitResponseResult);
+      $this->SubmitResponseAndCalculateBeFirstReadyResult = $SubmitResponseAndCalculateBeFirstReadyResult;
     }
 
 }

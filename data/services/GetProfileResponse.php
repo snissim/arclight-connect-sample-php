@@ -6,18 +6,20 @@ class GetProfileResponse extends ResponseBase
 {
 
     /**
-     * @var ConsumerProfile $Profile
+     * @var anyType $GetProfileResult
      * @access public
      */
-    public $Profile = null;
+    public $GetProfileResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetProfileResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetProfileResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetProfileResult = $GetProfileResult;
     }
 
 }

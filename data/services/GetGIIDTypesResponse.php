@@ -6,18 +6,20 @@ class GetGIIDTypesResponse extends ResponseBase
 {
 
     /**
-     * @var GIIDType[] $GIIDTypes
+     * @var anyType $GetGIIDTypesResult
      * @access public
      */
-    public $GIIDTypes = null;
+    public $GetGIIDTypesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetGIIDTypesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetGIIDTypesResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetGIIDTypesResult = $GetGIIDTypesResult;
     }
 
 }

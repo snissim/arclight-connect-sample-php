@@ -6,11 +6,20 @@ class RegisterWebProfileResponse extends SubmitResponseResponse
 {
 
     /**
+     * @var anyType $RegisterWebProfileResult
      * @access public
      */
-    public function __construct()
+    public $RegisterWebProfileResult = null;
+
+    /**
+     * @param anyType $SubmitResponseResult
+     * @param anyType $RegisterWebProfileResult
+     * @access public
+     */
+    public function __construct($SubmitResponseResult, $RegisterWebProfileResult)
     {
-      parent::__construct();
+      parent::__construct($SubmitResponseResult);
+      $this->RegisterWebProfileResult = $RegisterWebProfileResult;
     }
 
 }
