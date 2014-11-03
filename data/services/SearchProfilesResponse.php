@@ -6,18 +6,20 @@ class SearchProfilesResponse extends ResponseBase
 {
 
     /**
-     * @var ConsumerSearchResult[] $SearchResults
+     * @var anyType $SearchProfilesResult
      * @access public
      */
-    public $SearchResults = null;
+    public $SearchProfilesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $SearchProfilesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $SearchProfilesResult)
     {
       parent::__construct($ErrorCode);
+      $this->SearchProfilesResult = $SearchProfilesResult;
     }
 
 }

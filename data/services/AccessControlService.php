@@ -1,7 +1,5 @@
 <?php
 
-include_once('Test.php');
-include_once('TestResponse.php');
 include_once('SendUserName.php');
 include_once('SendUserNameResponse.php');
 include_once('ResetCredentials.php');
@@ -16,8 +14,8 @@ include_once('ChangePasswordByResetCode.php');
 include_once('ChangePasswordByResetCodeResponse.php');
 include_once('ChangePassword.php');
 include_once('ChangePasswordResponse.php');
-include_once('ServiceRequest.php');
 include_once('SendUserNameRequest.php');
+include_once('ServiceRequest.php');
 include_once('ResetCredentialsRequest.php');
 include_once('SetCredentialsRequest.php');
 include_once('ValidateUserRequest.php');
@@ -35,8 +33,6 @@ class AccessControlService extends \SoapClient
      * @access private
      */
     private static $classmap = array(
-      'Test' => '\Test',
-      'TestResponse' => '\TestResponse',
       'SendUserName' => '\SendUserName',
       'SendUserNameResponse' => '\SendUserNameResponse',
       'ResetCredentials' => '\ResetCredentials',
@@ -51,8 +47,8 @@ class AccessControlService extends \SoapClient
       'ChangePasswordByResetCodeResponse' => '\ChangePasswordByResetCodeResponse',
       'ChangePassword' => '\ChangePassword',
       'ChangePasswordResponse' => '\ChangePasswordResponse',
-      'ServiceRequest' => '\ServiceRequest',
       'SendUserNameRequest' => '\SendUserNameRequest',
+      'ServiceRequest' => '\ServiceRequest',
       'ResetCredentialsRequest' => '\ResetCredentialsRequest',
       'SetCredentialsRequest' => '\SetCredentialsRequest',
       'ValidateUserRequest' => '\ValidateUserRequest',
@@ -146,16 +142,6 @@ class AccessControlService extends \SoapClient
     public function ChangePassword(ChangePassword $parameters)
     {
       return $this->__soapCall('ChangePassword', array($parameters));
-    }
-
-    /**
-     * @param Test $parameters
-     * @access public
-     * @return TestResponse
-     */
-    public function Test(Test $parameters)
-    {
-      return $this->__soapCall('Test', array($parameters));
     }
 
 }

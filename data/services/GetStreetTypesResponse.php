@@ -6,18 +6,20 @@ class GetStreetTypesResponse extends ResponseBase
 {
 
     /**
-     * @var StreetType[] $StreetTypes
+     * @var anyType $GetStreetTypesResult
      * @access public
      */
-    public $StreetTypes = null;
+    public $GetStreetTypesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetStreetTypesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetStreetTypesResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetStreetTypesResult = $GetStreetTypesResult;
     }
 
 }

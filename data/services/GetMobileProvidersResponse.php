@@ -6,18 +6,20 @@ class GetMobileProvidersResponse extends ResponseBase
 {
 
     /**
-     * @var MobileProvider[] $MobileProviders
+     * @var anyType $GetMobileProvidersResult
      * @access public
      */
-    public $MobileProviders = null;
+    public $GetMobileProvidersResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetMobileProvidersResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetMobileProvidersResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetMobileProvidersResult = $GetMobileProvidersResult;
     }
 
 }

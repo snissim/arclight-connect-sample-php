@@ -4,12 +4,6 @@ class AddressInfo
 {
 
     /**
-     * @var string $Apartment
-     * @access public
-     */
-    public $Apartment = null;
-
-    /**
      * @var string $Block
      * @access public
      */
@@ -22,22 +16,52 @@ class AddressInfo
     public $Building = null;
 
     /**
-     * @var string $City
-     * @access public
-     */
-    public $City = null;
-
-    /**
-     * @var string $CityCode
-     * @access public
-     */
-    public $CityCode = null;
-
-    /**
      * @var string $Country
      * @access public
      */
     public $Country = null;
+
+    /**
+     * @var string $DirectMailApartment
+     * @access public
+     */
+    public $DirectMailApartment = null;
+
+    /**
+     * @var string $DirectMailCityCode
+     * @access public
+     */
+    public $DirectMailCityCode = null;
+
+    /**
+     * @var string $DirectMailCityName
+     * @access public
+     */
+    public $DirectMailCityName = null;
+
+    /**
+     * @var string $DirectMailPostalCode
+     * @access public
+     */
+    public $DirectMailPostalCode = null;
+
+    /**
+     * @var string $DirectMailStateCode
+     * @access public
+     */
+    public $DirectMailStateCode = null;
+
+    /**
+     * @var string $DirectMailStateName
+     * @access public
+     */
+    public $DirectMailStateName = null;
+
+    /**
+     * @var string $DirectMailStreetName
+     * @access public
+     */
+    public $DirectMailStreetName = null;
 
     /**
      * @var string $District
@@ -50,30 +74,6 @@ class AddressInfo
      * @access public
      */
     public $HouseNumber = null;
-
-    /**
-     * @var string $PostalCode
-     * @access public
-     */
-    public $PostalCode = null;
-
-    /**
-     * @var string $State
-     * @access public
-     */
-    public $State = null;
-
-    /**
-     * @var string $StateCode
-     * @access public
-     */
-    public $StateCode = null;
-
-    /**
-     * @var string $StreetName
-     * @access public
-     */
-    public $StreetName = null;
 
     /**
      * @access public

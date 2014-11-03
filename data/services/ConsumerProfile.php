@@ -10,16 +10,16 @@ class ConsumerProfile
     public $Address = null;
 
     /**
-     * @var string $AgeVerificationType
+     * @var string $AgeVerificationCode
      * @access public
      */
-    public $AgeVerificationType = null;
+    public $AgeVerificationCode = null;
 
     /**
-     * @var string $AgeVerificationTypeCode
+     * @var string $AgeVerificationName
      * @access public
      */
-    public $AgeVerificationTypeCode = null;
+    public $AgeVerificationName = null;
 
     /**
      * @var string $AvailabilityReason
@@ -52,10 +52,10 @@ class ConsumerProfile
     public $DateOfBirth = null;
 
     /**
-     * @var string $Email
+     * @var string $EmailAddress
      * @access public
      */
-    public $Email = null;
+    public $EmailAddress = null;
 
     /**
      * @var string $FirstName
@@ -64,22 +64,22 @@ class ConsumerProfile
     public $FirstName = null;
 
     /**
-     * @var string $Gender
+     * @var string $GenderCode
      * @access public
      */
-    public $Gender = null;
+    public $GenderCode = null;
 
     /**
-     * @var string $GiidNumber
+     * @var string $GiidNumber1
      * @access public
      */
-    public $GiidNumber = null;
+    public $GiidNumber1 = null;
 
     /**
-     * @var string $HomePhoneNumber
+     * @var string $HomePhoneHomePhone
      * @access public
      */
-    public $HomePhoneNumber = null;
+    public $HomePhoneHomePhone = null;
 
     /**
      * @var string $LastName
@@ -88,10 +88,10 @@ class ConsumerProfile
     public $LastName = null;
 
     /**
-     * @var string $MobileNumber
+     * @var string $MobilePhoneMobilePhone
      * @access public
      */
-    public $MobileNumber = null;
+    public $MobilePhoneMobilePhone = null;
 
     /**
      * @param int $ConsumerId

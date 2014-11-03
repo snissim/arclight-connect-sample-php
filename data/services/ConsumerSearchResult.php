@@ -52,6 +52,12 @@ class ConsumerSearchResult
     public $MiddleName = null;
 
     /**
+     * @var string $State
+     * @access public
+     */
+    public $State = null;
+
+    /**
      * @param int $ConsumerId
      * @param dateTime $DateOfBirth
      * @access public

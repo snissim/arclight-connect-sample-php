@@ -6,18 +6,20 @@ class GetVenuesResponse extends ResponseBase
 {
 
     /**
-     * @var CollectionCity[] $CollectionCityVenues
+     * @var anyType $GetVenuesResult
      * @access public
      */
-    public $CollectionCityVenues = null;
+    public $GetVenuesResult = null;
 
     /**
      * @param int $ErrorCode
+     * @param anyType $GetVenuesResult
      * @access public
      */
-    public function __construct($ErrorCode)
+    public function __construct($ErrorCode, $GetVenuesResult)
     {
       parent::__construct($ErrorCode);
+      $this->GetVenuesResult = $GetVenuesResult;
     }
 
 }

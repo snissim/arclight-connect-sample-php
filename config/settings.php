@@ -6,4 +6,5 @@ define("REFERENCE_WSDL", BASEURL .  "/ReferenceService.svc?singleWsdl");
 define("CONSUMER_WSDL", BASEURL . "/ConsumerService.svc?singleWsdl");
 define("DEVICE_KEY", "5DE6877A-FEB3-4C50-8CC0-458140ABFBBB");
 define("MARKET_CODE", "AR");
-
+define("DIRECT_MAIL_DELIVERY_STATUS_CODE", "4M");
+define("EMAIL_DELIVERABILITY_STATUS_CODE", "3D");

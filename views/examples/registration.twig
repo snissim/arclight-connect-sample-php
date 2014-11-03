@@ -32,8 +32,13 @@
                     <input type="text" class="form-control" name="SourceProvince" value="{{ SourceProvince }}" >
                 </div>
                 <div class="form-group">
-                    <label for="DirectMailPostalCode">Zipcode</label>
+                    <label for="DirectMailPostalCode">Postal Code</label>
                     <input type="text" class="form-control" name="DirectMailPostalCode" value="{{ DirectMailPostalCode }}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="EmailAddress">Email Address</label>
+                    <input type="email" class="form-control" name="EmailAddress" value="{{ EmailAddress }}" >
                 </div>
 
 
@@ -45,11 +50,59 @@
                         <option value="U">Unknown</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="GIIDType1Code">GIID Type</label>
+                    <select name="GIIDType1Code" class="form-control">
+                        <option value="C">Driver's License</option>
+                        <option value="D">Passport</option>
+                        <option value="E">Libreta Civica</option>
+                        <option value="F">Libreta De Enrolamiento</option>
+                        <option value="G">DNI</option>
+                        <option value="H">Cedula De Identidad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="HasAcceptedLegalTermsCode">Has Accepted Legal Terms</label>
+                    <input type="checkbox" class="form-control" name="HasAcceptedLegalTermsCode" value="Y"/>
+                </div>
                 <div class="form-group">
                     <label for="DateOfBirth">Birth Date</label>
                     <input type="date" class="form-control" name="DateOfBirth" value="{{ DateOfBirth }}" >
                 </div>
+                <div class="form-group">
+                    <label for="ResponseDate">Response Date</label>
+                    <input type="date" class="form-control" name="ResponseDate" value="{{ ResponseDate }}" >
+                </div>
+                <div class="form-group">
+                    <label for="CampaignCode">Campaign Code</label>
+                    <input type="text" class="form-control" name="CampaignCode" value="{{ CampaignCode }}" >
+                </div>
+                <div class="form-group">
+                    <label for="PhaseCode">Phase Code</label>
+                    <input type="text" class="form-control" name="PhaseCode" value="{{ PhaseCode }}" >
+                </div>
+                <div class="form-group">
+                    <label for="AudienceCode">Audience Code</label>
+                    <input type="text" class="form-control" name="AudienceCode" value="{{ AudienceCode }}" >
+                </div>
+                <div class="form-group">
+                    <label for="MediaCategoryCode">Media Category Code</label>
+                    <input type="text" class="form-control" name="MediaCategoryCode" value="{{ MediaCategoryCode }}" >
+                </div>
+                <div class="form-group">
+                    <label for="PieceCategoryCode">Piece Category Code</label>
+                    <input type="text" class="form-control" name="PieceCategoryCode" value="{{ PieceCategoryCode }}" >
+                </div>
+                <div class="form-group">
+                    <label for="PieceCode">Piece Code</label>
+                    <input type="text" class="form-control" name="PieceCode" value="{{ PieceCode }}" >
+                </div>
 
+                <div class="form-group">
+                    <label for="KeyDate">Key Date</label>
+                    <input type="date" class="form-control" name="KeyDate" value="{{ KeyDate }}" >
+                </div>
                 <div class="form-group">
                     <label for="ProfileCode">Profile</label>
                     <select name="ProfileCode" class="form-control">
